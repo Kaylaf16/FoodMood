@@ -13,9 +13,10 @@ app.use(controllers);
 
 
 
+
 //app.set('views', path.join(__dirname, "views"));
 //app.use(express.static(path.join(__dirname, 'public')));
-db.connect('mongodb://localhost:27017/restaurants',function(err)
+db.connect('mongodb://localhost:27017/rates',function(err)
 {
   if(err){  console.log('connection failed');}
   else{

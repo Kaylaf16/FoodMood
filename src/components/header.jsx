@@ -6,11 +6,11 @@ class Header extends React.Component {
   var HeaderStyle = {
 
     flex:1,
-    height:50,
+    height:55,
     alignSelf: 'stretch',
     background:"#C4625D",
     padding:0,
-  
+
     margin:0}
     return(<div style={HeaderStyle}>
       <Tabs/>
