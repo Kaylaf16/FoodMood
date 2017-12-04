@@ -4,7 +4,27 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script>
+      getLocation();
+      function getLocation() {
+          if (navigator.geolocation) {
 
+            navigator.geolocation.getCurrentPosition(this.showPosition);
+
+          } else {
+              console.log( "Geolocation is not supported by this browser.");
+          }
+      }
+      function showPosition(position) {
+          location.lat = position.coords.latitude;
+          location.long = position.coords.longitude;
+
+          $.get('/foodquery/location?'+ 'long='+location.lat+'&'+'lat='+location.long,function(data,status){ // this is ajax
+            console.log("location: " + data);
+          })
+
+      }
+      </script>
     <meta charset="utf-8">
     <title>React.js using NPM, Babel6 and Webpack</title>
   </head>

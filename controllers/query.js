@@ -3,7 +3,7 @@ var db = require("../model/db");
 var exports = module.exports = {};
 
 // call back needs to be put into place and edit query for food
-exports.query = function(sortinfo,callback){
+exports.query = function(sortinfo,long,lat,loading,callback){
 var sortlimit="";
 
     var query1, query2;
@@ -25,13 +25,15 @@ var sortlimit="";
         return console.log("failed to gather data" + " "+ error);}
         else if(result.length== 0){console.log("result is empty look at query and try again, or no results found")}
       else{
-      
+
       if(finalresults.length == 2 )
       {
        return finalresults;
      }
      else{
-       finalresults.push(result);
+       //finalresults.push(result);
+       loading();
+       callback(result);
      }
   }
       })
@@ -47,10 +49,11 @@ var sortlimit="";
            return finalresults;
          }
          else{
-           finalresults.push(result);
+           //finalresults.push(result);
+           callback(result);
          }
     }
 
         })
-    callback(finalresults);
+
       }

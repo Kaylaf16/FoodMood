@@ -1,6 +1,7 @@
 import React from 'react';
 
 var info = '';
+
 class App extends React.Component {
 
   getdata()
@@ -15,6 +16,8 @@ class App extends React.Component {
 })
 
 }
+
+
   render () {
     this.getdata();
     return (<div>

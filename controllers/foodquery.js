@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 var db = require("../model/db");
 var sort = require("./results.js");
+var location = require("./location.js")
 var queryresult = require("./query.js");
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 var bar = "";
@@ -9,8 +10,18 @@ information = {
   score:"",
   label:""
 }
+location = {
+  longitude:0,
+  latitude:0
+}
 sortinfo = ""
 finalresults = []
+router.get('/location',(req,res)=>{
+  location.longitude = parseFloat(req.query.lat);
+  location.latitude = parseFloat(req.query.long);
+  console.log(location);
+
+})
 router.post('/', (req,res)=>{
   if(typeof req.body.foodquery === 'undefined'){
 
@@ -44,7 +55,7 @@ router.post('/', (req,res)=>{
            information.score = (response.sentiment.document["score"]);
            information.label = (response.sentiment.document["label"]);
            sortinfo = sort.results(information.score);
-        
+
 
      }
       res.redirect("/#/resultpage");
@@ -53,11 +64,15 @@ router.post('/', (req,res)=>{
 
 })
 router.get('/getdata',(req,res)=>{
-queryinfo=queryresult.query(sortinfo,(e)=>{
-res.send(e);
+queryinfo=queryresult.query(sortinfo,location.longitude,location.latitude,(e)=>{
+setTimeout(function(){ console.log("fetching data...."); res.json( finalresults);}, 3000);
+}, callback=>{
+  finalresults.push(callback);
+
 });
 });
 router.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'))
 })
+
 module.exports = router;
