@@ -3,8 +3,9 @@ var db = require("../model/db");
 var exports = module.exports = {};
 
 // call back needs to be put into place and edit query for food
-exports.query = function(sortinfo,long,lat,loading,callback){
+exports.query = function(sortinfo,longitude,latitude,loading,callback){
 var sortlimit="";
+var finalresults=[];
 
     var query1, query2;
 
@@ -26,15 +27,17 @@ var sortlimit="";
         else if(result.length== 0){console.log("result is empty look at query and try again, or no results found")}
       else{
 
-      if(finalresults.length == 2 )
+     if(finalresults.length == 2 )
       {
        return finalresults;
      }
      else{
-       //finalresults.push(result);
-       loading();
-       callback(result);
+
+      loading();
+      callback(result);
+
      }
+
   }
       })
 
@@ -49,11 +52,15 @@ var sortlimit="";
            return finalresults;
          }
          else{
-           //finalresults.push(result);
+
+
            callback(result);
+
          }
+
     }
 
-        })
+  })
+
 
       }

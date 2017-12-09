@@ -1,18 +1,19 @@
 import React from 'react';
-
+import Header from './header.jsx';
 var info = '';
 
 class App extends React.Component {
 
   getdata()
   {
-
-    fetch('/foodquery/getdata')
+    console.log("hi");
+  fetch('/foodquery/getdata')
   .then (results =>{
     return results.json()
   }).then (data=> {
+
  info = data;
- console.log(info);
+ console.log(data);
 })
 
 }
@@ -20,7 +21,7 @@ class App extends React.Component {
 
   render () {
     this.getdata();
-    return (<div>
+    return (<div><Header/>
       <Result/>
     </div>)
   }

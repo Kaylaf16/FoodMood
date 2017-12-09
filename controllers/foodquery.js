@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 var db = require("../model/db");
 var sort = require("./results.js");
-var location = require("./location.js")
+
 var queryresult = require("./query.js");
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 var bar = "";
@@ -15,13 +15,7 @@ location = {
   latitude:0
 }
 sortinfo = ""
-finalresults = []
-router.get('/location',(req,res)=>{
-  location.longitude = parseFloat(req.query.lat);
-  location.latitude = parseFloat(req.query.long);
-  console.log(location);
 
-})
 router.post('/', (req,res)=>{
   if(typeof req.body.foodquery === 'undefined'){
 
@@ -63,9 +57,16 @@ router.post('/', (req,res)=>{
 
 
 })
+router.get('/location',(req,res)=>{
+  location.longitude = parseFloat(req.query.lat);
+  location.latitude = parseFloat(req.query.long);
+  console.log(location);
+
+})
 router.get('/getdata',(req,res)=>{
+var finalresults =[];
 queryinfo=queryresult.query(sortinfo,location.longitude,location.latitude,(e)=>{
-setTimeout(function(){ console.log("fetching data...."); res.json( finalresults);}, 3000);
+setTimeout(function(){ console.log("fetching data...."); res.json(finalresults)}, 2000);
 }, callback=>{
   finalresults.push(callback);
 
