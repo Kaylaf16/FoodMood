@@ -64,8 +64,4 @@ Currently there is no live deployment, but check back later!!
 
 * **Kayla Ford** 
 
-## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
