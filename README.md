@@ -11,7 +11,9 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-You will first need the latest version of node on your system. The project also requires you to have your own IBM Watson Bluemix account since the application utilizes this. Lastly you will need MONGODB up and running on your system with the restaurants database on it. You can find the json file to get this database here:
+You will first need the latest version of node on your system. 
+The project also requires you to have your own IBM Watson Bluemix account since the application utilizes this. 
+Lastly you will need MONGODB up and running on your system with the restaurants database on it. You can find the json file to get this database here:
 https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json
 ```
 
@@ -19,16 +21,20 @@ https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-data
 
 A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
+install all package dependencies 
 
 ```
-Give the example
+npm install
 ```
 
-And repeat
-
+insert your bluemix credentials in the foodquery.js file
 ```
-until finished
+      'username': '60e5780c-7efc-4c0b-bd7c-19f24d313089',
+      'password': 'RxIHeEKIqNoj',
+```
+insert the name of the database that contains the restaurant information in the index.js file
+```
+'mongodb://localhost:27017/rates'
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
