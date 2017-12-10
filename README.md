@@ -1,6 +1,6 @@
 # FoodMood
 
-One Paragraph of project description goes here
+FoodMood is a full stack node js application that allows users to enter their mood in and a list of restaurants is generated that suggests both healthy and unhealthy choices. The list differs depending on your mood!
 
 ## Getting Started
 
@@ -11,7 +11,8 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+You will first need the latest version of node on your system. The project also requires you to have your own IBM Watson Bluemix account since the application utilizes this. Lastly you will need MONGODB up and running on your system with the restaurants database on it. You can find the json file to get this database here:
+https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json
 ```
 
 ### Installing
