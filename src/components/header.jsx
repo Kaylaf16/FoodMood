@@ -37,7 +37,10 @@ class Header extends React.Component {
        paddingBottom:0,
        color:"white",
 
-      }
+     };
+      var LinkStyle ={
+        textDecoration:"none"
+      };
       var HeadingStyle ={
         float:"left",
         fontFamily: "cursive",
@@ -50,10 +53,10 @@ class Header extends React.Component {
       return(
         <div className ="container-fluid">
           <ul style = {TabStyle1}>
-            <li style = {HeadingStyle}> PlaceHolder</li>
+            <li style = {HeadingStyle}> <a style={LinkStyle}href ="">FoodMood</a></li>
           </ul>
-        <ul style = {TabStyle1} >
-        <li style = {TabStyle} >Placeholder</li>
+        <ul style = {TabStyle1}>
+        <li style = {TabStyle}>Placeholder</li>
         <li style = {TabStyle}>Placeholder</li>
         </ul>
       </div>)

@@ -42,34 +42,73 @@ class App extends React.Component {
     }
 
     var resultlist =this.state.info.map(function(element){
-      return <Result/>;
+      return <Result restaurant={element.name} building={element.address.building} location={element.address.street}/>;
     });
-    console.log(this.state.info);
-    return (<div ><Header /><div style = {HeadingStyle}>
+
+    return (<div ><Header/><div style = {HeadingStyle}>
       {resultlist}
       </div>
     </div>)
   }
 }
 class Result extends React.Component{
+  constructor(props)
+  { super();
+    this.state={
+      address:""
+    }
+  }
+  componentWillMount(){
+  var str = this.props.location;
+  var res = str.split(" ");
+  var str = this.props.building;
+res.forEach(function(element) {
+  str = str + "+"+ element.toUpperCase();
+});
 
-
+    this.setState({address:"https://www.google.com/maps/place/"+str})
+  }
   render(){
     var BoxStyle = {
-      height:150,
-      width:250,
+      height:250,
+      width:200,
       padding:0,
       backgroundColor:"#FFF",
       webkitFilter: "drop-shadow (0px 0px 5px #666)",
       filter: "drop-shadow(0px 0px 5px #666)",
-      margin:"2%"
+      margin:"2%",
+      textAlign:"center"
 
     }
+    var ImgStyle ={
+      float:"right",
+    }
+    var ParaStyle ={
+      marginTop:"10",
+      fontFamily: "cursive",
+      letterSpacing: 2,
+    }
+
   return (<div style = {BoxStyle}>
-    <p></p>
-    <p></p>
+    <Foodpic/>
+    <p style = {ParaStyle}>{this.props.restaurant}</p>
+
+    <a href ={this.state.address}>
+      <img style = {ImgStyle} src ="googlemap.png" width="30" height="30"/>
+    </a>
   </div>)
 }
+}
+class Foodpic extends React.Component{
+  render(){
+    var ImgStyle1 ={
+      height :"150",
+      width:"200"
+    }
+    return(
+      <img style={ImgStyle1} src = "food1.jpg"/>
+    )
+  }
 }
 
 export default App;
