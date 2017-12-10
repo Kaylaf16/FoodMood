@@ -29,12 +29,12 @@ npm install
 
 insert your bluemix credentials in the foodquery.js file
 ```
-      'username': '60e5780c-7efc-4c0b-bd7c-19f24d313089',
-      'password': 'RxIHeEKIqNoj',
+      'username': 'Your_username',
+      'password': 'Your_password',
 ```
 insert the name of the database that contains the restaurant information in the index.js file
 ```
-'mongodb://localhost:27017/rates'
+'mongodb://localhost:27017/restaurant_Database_Name'
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
