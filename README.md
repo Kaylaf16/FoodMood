@@ -11,8 +11,8 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-You will first need the latest version of node on your system. 
-The project also requires you to have your own IBM Watson Bluemix account since the application utilizes this. 
+You will first need the latest version of node on your system.
+The project also requires you to have your own IBM Watson Bluemix account since the application utilizes this.
 Lastly you will need MONGODB up and running on your system with the restaurants database on it. You can find the json file to get this database here:
 https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json
 ```
@@ -21,7 +21,7 @@ https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-data
 
 A step by step series of examples that tell you have to get a development env running
 
-install all package dependencies 
+install all package dependencies
 
 ```
 npm install
@@ -45,7 +45,7 @@ start the server
 npm start
 ```
 
-If you run this correctly you should see "Local Host 8000" running on the terminal 
+If you run this correctly you should see "Local Host 8000" running on the terminal
 
 ## Deployment
 
@@ -62,6 +62,4 @@ Currently there is no live deployment, but check back later!!
 
 ## Authors
 
-* **Kayla Ford** 
-
-
+* **Kayla Ford**
