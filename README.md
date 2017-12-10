@@ -1,6 +1,6 @@
 # FoodMood
 
-FoodMood is a full stack node js application that allows users to enter their mood in and a list of restaurants is generated that suggests both healthy and unhealthy choices. The list differs depending on your mood!
+FoodMood is a full stack node js application that allows users to enter their mood in and a list of restaurants is generated that suggests both healthy and unhealthy choices. The list differs depending on your mood! The application uses IBM Watson natural language analytics to determine your mood, this is then used to query food. This application encourages healthy eating when people are feeling down!
 
 ## Getting Started
 
@@ -36,56 +36,33 @@ insert the name of the database that contains the restaurant information in the 
 ```
 'mongodb://localhost:27017/restaurant_Database_Name'
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+run webpack
 ```
-Give an example
+npm run webpack
+```
+start the server
+```
+npm start
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+If you run this correctly you should see "Local Host 8000" running on the terminal 
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Currently there is no live deployment, but check back later!!
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [IBM WATSON NATURAL LANGUAGE UNDERSTANDING](https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/?node#introduction) - Natural Language Processing
+* [MONGODB](https://www.mongodb.com/) - Database used
+* [REACT](https://reactjs.org/) - Client side rendering framework used
+* [EXPRESS](https://expressjs.com/) - Backend framework used
+* [WEBPACK](https://webpack.js.org/) - Allowed me to run React in my application using babel
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Kayla Ford** 
 
 ## Acknowledgments
 
