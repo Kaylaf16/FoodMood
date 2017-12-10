@@ -1,6 +1,6 @@
 # FoodMood
 
-FoodMood is a full stack node js application that allows users to enter their mood in and a list of restaurants is generated that suggests both healthy and unhealthy choices. The list differs depending on your mood! The application uses IBM Watson natural language analytics to determine your mood, this is then used to query food. This application encourages healthy eating when people are feeling down!
+FoodMood is a full stack application that allows users to enter their mood and a list of restaurants is generated that suggests both healthy and unhealthy choices. The list differs depending on your mood! The application uses IBM Watson natural language analytics to determine your mood. This application encourages healthy eating when people are feeling down!
 
 ## Getting Started
 
