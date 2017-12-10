@@ -6,7 +6,7 @@ class App extends React.Component {
 
   getdata()
   {
-    console.log("hi");
+  
   fetch('/foodquery/getdata')
   .then (results =>{
     return results.json()

@@ -60,7 +60,7 @@ router.post('/', (req,res)=>{
 router.get('/location',(req,res)=>{
   location.longitude = parseFloat(req.query.lat);
   location.latitude = parseFloat(req.query.long);
-  console.log(location);
+
 
 })
 router.get('/getdata',(req,res)=>{
