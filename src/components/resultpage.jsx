@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './header.jsx';
-
+import Footer from './footer.jsx';
 
 class App extends React.Component {
 
@@ -37,17 +37,39 @@ class App extends React.Component {
       display:"flex",
       flexFlow: "row wrap",
       alignItems: "center",
-  justifyContent: "center",
+      justifyContent: "center",
       marginTop:"5%"
+    }
+    var mainStyle ={
+
+
+    }
+    var hStyle ={
+      textAlign:"center",
+      fontWeight:"200",
+      fontFamily: "Avenir Next",
+      marginBottom:30,
+
+    }
+    var InputSearchStyle ={
+
+    }
+    var searchDiv ={
+      display:"flex",
+      alignItems: "center",
+      justifyContent: "center"
     }
 
     var resultlist =this.state.info.map(function(element){
       return <Result restaurant={element.name} building={element.address.building} location={element.address.street}/>;
     });
 
-    return (<div ><Header/><div style = {HeadingStyle}>
+    return (<div style = {mainStyle} ><Header/><h1 style = {hStyle}>Your Results are here..</h1>
+    <div style = {searchDiv}><input style = {InputSearchStyle} type="text"id="search"/></div>
+    <div style = {HeadingStyle}>
       {resultlist}
       </div>
+
     </div>)
   }
 }
@@ -85,7 +107,9 @@ res.forEach(function(element) {
     }
     var ParaStyle ={
       marginTop:"10",
-      fontFamily: "cursive",
+      fontSize:"16px",
+      fontFamily: "Avenir Next",
+      fontWeight: 300,
       letterSpacing: 2,
     }
 

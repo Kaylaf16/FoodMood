@@ -39,7 +39,8 @@ class Header extends React.Component {
 
      };
       var LinkStyle ={
-        textDecoration:"none"
+        textDecoration:"none",
+        color:"white"
       };
       var HeadingStyle ={
         float:"left",

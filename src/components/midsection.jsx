@@ -11,7 +11,7 @@ class Midsecton extends React.Component{
     alignItems: "center",
     justifyContent: "center",
       minheHeight:300,
-    backgroundAttachment: "fixed",
+
      backgroundPosition: "center",
      backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
@@ -20,10 +20,8 @@ class Midsecton extends React.Component{
       height:"85%",
       opacity:0.8,
     boxShadow:"0 10px 10px rgba(182, 182, 182, 0.75)",
-     marginTop: "55px",
-     position:"fixed",
      top:0,
-
+     marginBottom:50,
       backgroundImage:"url("+"food4.jpg"+")",
     }
 
@@ -55,16 +53,9 @@ class InnerMidForm extends React.Component{
 
   render(){
     var FormButton = {
-    letterSpacing: 2,
-    marginLeft:14,
-    backgroundColor:"#C4625D",
-    width:90,
-    fontSize:15,
-    fontFamily:"Roboto",
-    color:"white",
-    height:28,
-    borderRadius:5,
-    borderColor:"#C4625D",
+
+  border:0,
+  background:"transparent"
 
     }
     var divStyle =
@@ -72,17 +63,22 @@ class InnerMidForm extends React.Component{
       paddingLeft:30,
       marginLeft:50,
       paddingTop:20,
+      marginRight:20
     }
     var InputStyle ={
       width:200,
-
+      borderRadius:"5px"
+    }
+    var imgStyle1={
+      width:50,
+      height:50
     }
 
     return(
       <div style = {divStyle} >
         <form method= "POST" action = "/foodquery" encType="application/x-www-form-urlencoded">
         <input style = {InputStyle} type="text" name="foodquery" id="food"/>
-        <button style = {FormButton}>Lets Go</button>
+        <button style = {FormButton}><img src = "icon.png" style = {imgStyle1}/></button>
         </form>
 
     </div>)

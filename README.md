@@ -45,7 +45,7 @@ start the server
 npm start
 ```
 
-If you run this correctly you should see "Local Host 8000" running on the terminal
+If you run this correctly you should see "Local Host running on port 8000" running on the terminal
 
 ## Deployment
 

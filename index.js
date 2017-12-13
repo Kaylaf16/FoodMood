@@ -22,7 +22,7 @@ db.connect('mongodb://localhost:27017/rates',function(err)
   else{
 
 app.listen(8000, function () {
-  console.log('Local host 8000')
+  console.log('Local host running on port 8000')
 })
 }
 })
