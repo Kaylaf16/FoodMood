@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './header.jsx';
+
 import Footer from './footer.jsx';
 
 class App extends React.Component {
@@ -37,11 +37,10 @@ class App extends React.Component {
       display:"flex",
       flexFlow: "row wrap",
       alignItems: "center",
-      justifyContent: "center",
-      marginTop:"5%"
+      justifyContent: "center"
+
     }
     var mainStyle ={
-
 
     }
     var hStyle ={
@@ -49,9 +48,6 @@ class App extends React.Component {
       fontWeight:"200",
       fontFamily: "Avenir Next",
       marginBottom:30,
-
-    }
-    var InputSearchStyle ={
 
     }
     var searchDiv ={
@@ -64,8 +60,8 @@ class App extends React.Component {
       return <Result restaurant={element.name} building={element.address.building} location={element.address.street}/>;
     });
 
-    return (<div style = {mainStyle} ><Header/><h1 style = {hStyle}>Your Results are here..</h1>
-    <div style = {searchDiv}><input style = {InputSearchStyle} type="text"id="search"/></div>
+    return (<div style = {mainStyle} ><h1 style = {hStyle}>Your Results are here..</h1>
+
     <div style = {HeadingStyle}>
       {resultlist}
       </div>

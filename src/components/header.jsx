@@ -10,7 +10,7 @@ class Header extends React.Component {
     alignSelf: 'stretch',
     background:"#C4625D",
     padding:0,
-
+    opacity:0.85,
     margin:0}
     return(<div style={HeaderStyle}>
       <Tabs/>

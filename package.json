@@ -20,11 +20,14 @@
     "express": "^4.16.2",
     "mongodb": "^2.2.33",
     "react": "^16.1.0",
+    "react-bootstrap": "^0.31.5",
     "react-dom": "^16.1.0",
     "react-responsive": "^3.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-styling": "^1.6.4",
+    "react-transition-group": "^2.2.1",
+    "reactstrap": "^4.8.0",
     "watson-developer-cloud": "^2.42.0",
     "webpack": "^3.8.1"
   }

@@ -63,3 +63,6 @@ Currently there is no live deployment, but check back later!!
 ## Authors
 
 * **Kayla Ford**
+
+##Example
+![Alt text](./public/example.png?raw=true "Title")
