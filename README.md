@@ -64,5 +64,5 @@ Currently there is no live deployment, but check back later!!
 
 * **Kayla Ford**
 
-##Example
+## Example
 ![Alt text](./public/example.png?raw=true "Title")
