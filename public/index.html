@@ -1,12 +1,13 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href= "index.css"/>
+    <link rel="stylesheet" type="text/css" href= "ionicons.css"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script>
-      getLocation();
 
+      getLocation();
         function getLocation() {
             if (navigator.geolocation) {
               navigator.geolocation.getCurrentPosition(this.showPosition);
@@ -21,6 +22,7 @@
               console.log("location: " + data);
             })
         }
+
         </script>
     <meta charset="utf-8">
     <title>FoodMood</title>
@@ -29,4 +31,14 @@
     <div id="app" />
     <script src="bundle.js" type="text/javascript"></script>
   </body>
+  <script>
+  $("#search").hover(function(){
+    $("#search").css("backgroundColor","white");
+      $("#search").css("color","black");
+        $("#search").css("fontWeight","500");
+  },function(){
+      $("#search").css("color","white");
+      $("#search").css("backgroundColor","transparent");
+  });
+  </script>
 </html>

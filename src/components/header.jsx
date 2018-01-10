@@ -8,7 +8,7 @@ class Header extends React.Component {
     flex:1,
     height:55,
     alignSelf: 'stretch',
-    background:"#C4625D",
+    background:"#D64541",
     padding:0,
     opacity:0.85,
     margin:0}
@@ -33,7 +33,7 @@ class Header extends React.Component {
       var TabStyle1 = {
        listStyleType: "none",
 
-       fontFamily: "cursive",
+       fontFamily: "Avenir Next",
        paddingBottom:0,
        color:"white",
 
@@ -44,7 +44,7 @@ class Header extends React.Component {
       };
       var HeadingStyle ={
         float:"left",
-        fontFamily: "cursive",
+        fontFamily: "Avenir Next",
         padding:10,
         letterSpacing: 2,
         fontSize:25,

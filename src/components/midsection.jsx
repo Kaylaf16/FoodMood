@@ -20,10 +20,9 @@ class Midsecton extends React.Component{
       width:"100%",
       height:"85%",
       opacity:0.8,
-    boxShadow:"0 10px 10px rgba(182, 182, 182, 0.75)",
      top:0,
-     marginBottom:50,
-      backgroundImage:"url("+"food4.jpg"+")",
+     marginBottom:"50px",
+      backgroundImage:"linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('food4.jpg')"
     }
 
     return(<div className = "col-lg-12" style={MidStyle}><InnerMid /><InnerMidForm />
@@ -36,7 +35,7 @@ class InnerMid extends React.Component{
     var ImgStyle=
     {
         height:180,
-      
+
 
     }
     var InnerDiv =
@@ -71,17 +70,19 @@ class InnerMidForm extends React.Component{
       borderTop:"none",
       borderLeft: "none",
       borderRight: "none",
-      borderBottom:" solid #000000 2px",
+      borderBottom:" solid white 2px",
       padding: "3px 10px",
-      marginRight:"20px"
+      marginRight:"20px",
+      fontSize:"22px"
     }
     var imgStyle1={
       width:50,
       height:50
     }
     var FormButton = {
-      backgroundColor:"#000000",
-      border: "none",
+      backgroundColor:"transparent",
+      outline:0,
+      border: "2px solid white",
       color: "white",
       padding:" 5px 5px 5px 5px",
       textAlign: "center",
@@ -98,8 +99,8 @@ class InnerMidForm extends React.Component{
       <div style = {divStyle} >
 
         <form method= "POST" action = "/foodquery" encType="application/x-www-form-urlencoded">
-        <input style = {InputStyle} type="text" name="foodquery" id="food"/>
-        <button style = {FormButton}>Search</button>
+        <input style = {InputStyle} type="text"autocomplete="off" placeholder="How are you feeling?" name="foodquery" id="food"/>
+        <button id = "search" style = {FormButton}>Search</button>
         </form>
 
     </div>)

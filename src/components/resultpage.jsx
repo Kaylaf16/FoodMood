@@ -6,7 +6,7 @@ class App extends React.Component {
 
   constructor(props)
   {
-    super();
+    super(props);
     this.state={
       info:[]
     };
@@ -56,13 +56,15 @@ class App extends React.Component {
       justifyContent: "center"
     }
 
+
     var resultlist =this.state.info.map(function(element){
-      return <Result restaurant={element.name} building={element.address.building} location={element.address.street}/>;
+      return <Result restaurant={element.name} building={element.address.building} location={element.address.street}>
+      </Result>
     });
 
     return (<div style = {mainStyle} ><h1 style = {hStyle}>Your Results are here..</h1>
 
-    <div style = {HeadingStyle}>
+    <div style = {HeadingStyle} >
       {resultlist}
       </div>
 
@@ -71,11 +73,23 @@ class App extends React.Component {
 }
 class Result extends React.Component{
   constructor(props)
-  { super();
+  { super(props);
     this.state={
+      showComponent: "",
       address:""
-    }
+
+    };
+     this.buttonClick = this.buttonClick.bind(this);
   }
+  buttonClick()
+   {
+   console.log("hi");
+  this.setState({showComponent: "hi"});
+  if(this.state.showComponent)
+  {
+    setTimeout(<NewComponent/>, 5000);
+  }
+}
   componentWillMount(){
   var str = this.props.location;
   var res = str.split(" ");
@@ -88,8 +102,9 @@ res.forEach(function(element) {
   }
   render(){
     var BoxStyle = {
-      height:250,
+      height:200,
       width:200,
+      borderRadius:"100px",
       padding:0,
       backgroundColor:"#FFF",
       webkitFilter: "drop-shadow (0px 0px 5px #666)",
@@ -107,10 +122,11 @@ res.forEach(function(element) {
       fontFamily: "Avenir Next",
       fontWeight: 300,
       letterSpacing: 2,
+      paddingTop:50
     }
 
-  return (<div style = {BoxStyle}>
-    <Foodpic/>
+  return (<div style = {BoxStyle} onClick = {this.buttonClick}>
+
     <p style = {ParaStyle}>{this.props.restaurant}</p>
 
     <a href ={this.state.address}>
@@ -130,5 +146,12 @@ class Foodpic extends React.Component{
     )
   }
 }
+class NewComponent extends React.Component{
+  render(){
 
+    return(
+      <p>hi</p>
+    )
+  }
+}
 export default App;
