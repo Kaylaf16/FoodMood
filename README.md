@@ -49,7 +49,7 @@ If you run this correctly you should see "Local Host running on port 8000" runni
 
 ## Deployment
 
-Currently there is no live deployment, but check back later!!
+https://foodmoodproject.herokuapp.com/
 
 ## Built With
 

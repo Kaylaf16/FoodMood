@@ -24,8 +24,8 @@ router.post('/', (req,res)=>{
     }
     bar = JSON.stringify(req.body.foodquery);
     var natural_language_understanding = new NaturalLanguageUnderstandingV1({
-      'username': '60e5780c-7efc-4c0b-bd7c-19f24d313089',
-      'password': 'RxIHeEKIqNoj',
+      'username': 'Your_username',
+      'password': 'Your_password',
       'version_date': '2017-02-27'
     });
 
