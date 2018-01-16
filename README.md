@@ -12,7 +12,9 @@ What things you need to install the software and how to install them
 
 ```
 You will first need the latest version of node on your system.
+
 The project also requires you to have your own IBM Watson Bluemix account since the application utilizes this.
+
 Lastly you will need MONGODB up and running on your system with the restaurants database on it. You can find the json file to get this database here:
 https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json
 ```
