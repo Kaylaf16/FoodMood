@@ -1,6 +1,7 @@
 import React from 'react';
-
+import CircularProgressbar from 'react-circular-progressbar';
 import Footer from './footer.jsx';
+import Header from './header.jsx';
 
 class App extends React.Component {
 
@@ -41,14 +42,29 @@ class App extends React.Component {
 
     }
     var mainStyle ={
-
+        backgroundImage:"linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('food10.jpg')",
+        backgroundPosition:"center",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+      height:"100%"
+    }
+    var UlStyle={
+      width:"50%",
+      height:"60%",
+      overflow:"auto",
+      backgroundColor:"transparent",
+      marginTop:"2%",
+      textAlign:"center",
+      padding:"0",
+      marginRight:"auto",
+      marginLeft:"auto"
     }
     var hStyle ={
       textAlign:"center",
       fontWeight:"200",
       fontFamily: "Avenir Next",
       marginBottom:30,
-
+      marginTop:0,
     }
     var searchDiv ={
       display:"flex",
@@ -58,16 +74,14 @@ class App extends React.Component {
 
 
     var resultlist =this.state.info.map(function(element){
-      return <Result restaurant={element.name} building={element.address.building} location={element.address.street}>
+      return <Result restaurant={element.name} building={element.address.building} borough={element.borough} cuisine={element.cuisine} location={element.address.street}>
       </Result>
     });
 
-    return (<div style = {mainStyle} ><h1 style = {hStyle}>Your Results are here..</h1>
-
-    <div style = {HeadingStyle} >
+    return (<div style = {mainStyle} ><Header/>
+    <ul style = {UlStyle}>
       {resultlist}
-      </div>
-
+    </ul>
     </div>)
   }
 }
@@ -99,39 +113,47 @@ res.forEach(function(element) {
 });
 
     this.setState({address:"https://www.google.com/maps/place/"+str})
+
   }
   render(){
     var BoxStyle = {
-      height:200,
-      width:200,
-      borderRadius:"100px",
-      padding:0,
-      backgroundColor:"#FFF",
-      webkitFilter: "drop-shadow (0px 0px 5px #666)",
-      filter: "drop-shadow(0px 0px 5px #666)",
+      borderBottom:"1px solid white",
       margin:"2%",
       textAlign:"center"
 
     }
     var ImgStyle ={
       float:"right",
+      marginRight:"20px"
     }
     var ParaStyle ={
       marginTop:"10",
-      fontSize:"16px",
+      color:"white",
+      fontSize:"20px",
       fontFamily: "Avenir Next",
       fontWeight: 300,
       letterSpacing: 2,
       paddingTop:50
     }
+    var ParaStyle1 ={
+      marginTop:"2",
+      marginRight:"7",
+      color:"white",
+      fontSize:"18px",
+      fontFamily: "Avenir Next",
+      fontWeight: 300,
+      letterSpacing: 2,
+      paddingTop:5
+    }
+
 
   return (<div style = {BoxStyle} onClick = {this.buttonClick}>
 
     <p style = {ParaStyle}>{this.props.restaurant}</p>
+    <p style = {ParaStyle1}>{this.props.cuisine}<a href ={this.state.address}>
+        <img style = {ImgStyle} src ="googlemap.png" width="30" height="30"/>
+        </a></p>
 
-    <a href ={this.state.address}>
-      <img style = {ImgStyle} src ="googlemap.png" width="30" height="30"/>
-    </a>
   </div>)
 }
 }
@@ -153,5 +175,29 @@ class NewComponent extends React.Component{
       <p>hi</p>
     )
   }
+}
+class circle extends React.Component{
+   render() {
+        var options = {
+            strokeWidth: 2
+        };
+
+        // For demo purposes so the container has some dimensions.
+        // Otherwise progress bar won't be shown
+        var containerStyle = {
+            width: '200px',
+            height: '200px'
+        };
+
+        return (
+            <Circle
+                progress={this.state.progress}
+                text={'test'}
+                options={options}
+                initialAnimate={true}
+                containerStyle={containerStyle}
+                containerClassName={'.progressbar'} />
+        );
+    }
 }
 export default App;

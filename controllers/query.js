@@ -23,7 +23,7 @@ var finalresults=[];
       "address.coord.1":{$lt:latitudehigh,$gt:latitudelow}}]});
 
 
-    var projection = {_id:0,name:1,"address.building":1,"address.street":1};
+    var projection = {_id:0,name:1,"address.building":1,"address.street":1,borough:1,cuisine:1};
 
     db.get().collection('restaurants').find(query1,projection)
     .sort({cuisine:1, name: 1})
@@ -68,10 +68,5 @@ var finalresults=[];
 
   })
 
-
-//db.restaurants.find({$and:[{$or:[{cuisine:{$ne:"Sandwiches/Salads/Mixed Buffet"}},{cuisine:{$ne:"Salads"}},{cuisine:{$ne:"Juice, Smoothies, Fruit Salads"}},{cuisine:{$ne:"Fruits/Vegetables"}}],"address.coord.0":{$lt:-73.900457,$gt:-73.820457},"address.coord.1":{$lt:40.6999857,$gt:40.6349857}}]});
-
-//db.restaurants.find({$or:[{cuisine:"Sandwiches/Salads/Mixed Buffet"},{cuisine:"Salads"},{cuisine:"Juice, Smoothies, Fruit Salads"},{cuisine:"Fruits/Vegetables"},{"address.coord.0":{$lt:40.6399857,$gt:40.6349857}},{"address.coord.1":{$lt:-73.850457,$gt:-73.820457}}]});
-//db.restaurants.find({"address.coord.0":{$gt:0,$lt:40.6349857}},{"address.coord.1":-73.820457});
 
       }

@@ -7,13 +7,12 @@ exports.results = function(score){
     nonhealthy:0
   }
   if(score == 0){
-
     sort.healthy = 10;
     sort.nonhealthy = 10;
     return sort;
   }
   current = ((score * 100) * .20);
-  
+
   if( current < 0){
     sort.healthy =Math.floor((current * -1));
     sort.nonhealthy = 20 - Math.floor(current * -1 );
