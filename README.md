@@ -32,9 +32,13 @@ insert your bluemix credentials in the foodquery.js file
       'username': 'Your_username',
       'password': 'Your_password',
 ```
-insert the name of the database that contains the restaurant information in the index.js file
+insert the name of the database that contains the restaurant information into the index.js file (db.connect)
 ```
+For local mongodb server
 'mongodb://localhost:27017/restaurant_Database_Name'
+
+For mlab
+'mongodb://<dbuser>:<dbpassword>@<mlabconnectivity>/<databaseame>'
 ```
 run webpack
 ```
