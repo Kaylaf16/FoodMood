@@ -99,7 +99,7 @@ class InnerMidForm extends React.Component{
       <div style = {divStyle} >
 
         <form method= "POST" action = "/foodquery" encType="application/x-www-form-urlencoded">
-        <input style = {InputStyle} type="text"autocomplete="off" placeholder="How are you feeling?" name="foodquery" id="food"/>
+        <input style = {InputStyle} type="text"autoComplete="off" placeholder="How are you feeling?" name="foodquery" id="food"/>
         <button id = "search" style = {FormButton}>Search</button>
         </form>
 

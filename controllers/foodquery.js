@@ -24,8 +24,8 @@ router.post('/', (req,res)=>{
     }
     bar = JSON.stringify(req.body.foodquery);
     var natural_language_understanding = new NaturalLanguageUnderstandingV1({
-      'username': 'Your_username',
-      'password': 'Your_password',
+      'username': 'USERNAME',
+      'password': 'PASSWORD',
       'version_date': '2017-02-27'
     });
 
@@ -58,10 +58,10 @@ router.post('/', (req,res)=>{
 
 })
 router.get('/location',(req,res)=>{
-  location.longitude = parseFloat(req.query.lat);
-  location.latitude = parseFloat(req.query.long);
-
-
+  location.longitude = parseFloat(req.query.long);
+  location.latitude = parseFloat(req.query.lat);
+  console.log(location.longitude + " " +location.latitude);
+  console.log("location successfully set");
 })
 router.get('/getdata',(req,res)=>{
 var finalresults =[];
