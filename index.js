@@ -16,12 +16,12 @@ app.use(controllers);
 
 //app.set('views', path.join(__dirname, "views"));
 //app.use(express.static(path.join(__dirname, 'public')));
-db.connect('mongodb://localhost:27017/rates',function(err)
+db.connect('mongodb://<dbuser>:<dbpassword>@<mlabconnectivity>/<databaseame>',function(err)
 {
   if(err){  console.log('connection failed');}
   else{
 
-app.listen(8000, function () {
+app.listen(process.env.PORT || 8000, function () {
   console.log('Local host running on port 8000')
 })
 }
