@@ -16,7 +16,7 @@ app.use(controllers);
 
 //app.set('views', path.join(__dirname, "views"));
 //app.use(express.static(path.join(__dirname, 'public')));
-db.connect('',function(err)
+db.connect('mongodb://kf:one@ds259117.mlab.com:59117/restaurants_info',function(err)
 {
   if(err){  console.log('connection failed');
 }
