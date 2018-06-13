@@ -54,8 +54,7 @@ npm start
 If you run this correctly you should see "Local Host running on port 8000" running on the terminal
 
 ## Deployment
-
-https://foodmoodproject.herokuapp.com/
+Deployment configuration currently being updated!
 
 ## Built With
 
