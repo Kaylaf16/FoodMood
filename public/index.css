@@ -11,6 +11,7 @@ head{
 .ion-fork{
   font-size: 50px;
 text-align: center;
+
 }
 .ion-happy-outline{
   font-size: 50px;
@@ -20,7 +21,7 @@ text-align: center;
 .ion-pizza{
   font-size: 50px;
 text-align: center;
-
+color:#D64541;
 }
 #container {
   width: 100px;

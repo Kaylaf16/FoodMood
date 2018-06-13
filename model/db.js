@@ -2,7 +2,7 @@ var MongoClient = require('mongodb').MongoClient;
 var state = {
   db: null
 };
-// connect acccepts a parameter of url which is specified in another file
+
 exports.connect = function(url,done){
   if(state.db) return done()
 
